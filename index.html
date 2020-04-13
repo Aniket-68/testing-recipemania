@@ -1,198 +1,475 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Recipe Portal</title>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/app.js"> </script>
-    <style>
-        .contact-form {
-            background: #fff;
-            margin-top: 10%;
-            margin-bottom: 5%;
-            width: 70%;
-        }
-
-        .contact-form .form-control {
-            border-radius: 1rem;
-        }
-
-        .contact-image {
-            text-align: center;
-        }
-
-        .contact-image img {
-            border-radius: 6rem;
-            width: 11%;
-            margin-top: -3%;
-            transform: rotate(29deg);
-        }
-
-        .contact-form form {
-            padding: 14%;
-        }
-
-        .contact-form form .row {
-            margin-bottom: -7%;
-        }
-
-        .contact-form h3 {
-            margin-bottom: 8%;
-            margin-top: -10%;
-            text-align: center;
-            color: #0062cc;
-        }
-
-        .contact-form .btnContact {
-            width: 50%;
-            border: none;
-            border-radius: 1rem;
-            padding: 1.5%;
-            background: #dc3545;
-            font-weight: 600;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .btnContactSubmit {
-            width: 50%;
-            border-radius: 1rem;
-            padding: 1.5%;
-            color: #fff;
-            background-color: #0062cc;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+  <title>food&burps</title>
+  <!-- <link rel = "icon" href =  
+"requires a link to display logo in title" 
+        type = "image/x-icon"> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="index.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <nav class="navbar navbar-expand-lg navbar-light bg" style="background-color: rgba(255, 0, 0, 0.5);">
-        <a class="navbar-brand" href="#"><img src="./assets/img/layouts/food.png" class="ch"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body>
+  <header>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#recipe">Recipes<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a>
-                </li>
+<!-- NAVABAR START -->
+    <div class="nav-wrapper">
 
-            </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-            </form> -->
+      <!-- Veg or Nonveg slider in navbar -->
+      <div class="center">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <p style="font-size: 12px; margin: 0;">Veg Only</p>
+      </div>
 
-            <form action="login.html" class="inline">
-                <button class="float-right btn btn-primary" style="margin-right: 5px;">Login</button>
-            </form>
+      <!-- Contains logo in the center -->
+      <div class="logo-container">
+        <a href="#"><img class="logo" src="F&B_logo.jpg" alt="Logo"></a>
+      </div>
 
-            <form action="signup.html" class="inline">
-                <button class="float-right btn btn-success ">Signup</button>
-            </form>
-
+      <!-- Hamburger and its contents -->
+      <nav>
+        <input class="hidden" type="checkbox" id="menuToggle">
+        <label class="menu-btn" for="menuToggle">
+          <div class="menu"></div>
+          <div class="menu"></div>
+          <div class="menu"></div>
+        </label>
+        <!-- Slide from right and contents -->
+        <div class="nav-container">
+          <ul class="nav-tabs">
+            <li class="nav-tab">Home</li>
+            <li class="nav-tab">F&b Search</li>
+            <li class="nav-tab">Contact</li>
+            <li class="nav-tab">About</li>
+          </ul>
         </div>
-    </nav>
-    <!--carousel-->
-    <div class="container">
-        <div id="carousel" class="carousel slide col-lg-12" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active ">
-                    <img class="d-block w-100"
-                        src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-                        alt="First slide">
-                </div>
-                <div class="carousel-item acti">
-                    <img class="d-block w-100"
-                        src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-                        alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100"
-                        src="https://images.unsplash.com/photo-1435771112039-1e5b2bcad966?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450"
-                        alt="Third slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+      </nav>
     </div>
-    <!-- carousel ends -->
-    <!-- recipe start -->
-    <section id='recipe'>
-        <div class="section-header text-center">
-            <h2 style="font-weight:bold;">Recipe </h2>
-        </div>
+  </header>
+<!-- NAVBAR END -->
 
-        <div class="row" id="rec" style="padding-left:15%;padding-right:10%;">
-        </div>
-    </section>
-    <!-- recipe ends -->
-    <!-- Contact Section Start -->
-    <section id="contact">
-        <div class="section-header text-center">
-            <h2 style="font-weight:bold;">Contact</h2>
-        </div>
-        <div class="container contact-form">
+<!-- MAIN CONTENT -->
 
-            <div class="contact-image">
-                <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
-            </div>
-            <form action="./resources/contact.php" method="post">
-                <h3>Drop Us a Message</h3>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value=""
-                                required />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value=""
-                                required />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *"
-                                value="" required />
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" required />
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <textarea name="txtMsg" class="form-control" placeholder="Your Message *"
-                                style="width: 100%; height: 150px;"></textarea>
-                        </div>
-                    </div>
-                </div>
+<!-- SEARCH BAR START -->
+  <!-- <div class="Searchbox">
+            <form>
+                <input type="text" name="search" placeholder="Search..">
             </form>
-        </div>
-    </section>
-    <!-- Contact Section End -->
+    </div>         -->
 
+<!-- SEARCH BAR END -->
+
+  <h1>Taste Of The Month...</h1>
+
+<!-- GRID SLIDER START -->
+  <div class="scrollmenu">
+
+    <!-- Sample card1 start -->
+    <div class="card1">
+      <img class="img-card-slider" src="F&B_logo.jpg">
+      <p class="recipe-name">RECIPE1</p>
+
+      <!-- Modal= VIEW button -->
+      <div class="w3-container">
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">VIEW</button>
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container">
+              <span onclick="document.getElementById('id01').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+              <p>Some text. Some text. Some text.</p>
+              <p>Some text. Some text. Some text.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sample card1 end -->
+
+    <!-- Sample card2 start -->
+    <div class="card1">
+      <img class="img-card-slider" src="F&B_logo.jpg">
+      <p class="recipe-name">RECIPE2</p>
+
+      <!-- Modal= VIEW button -->
+      <div class="w3-container">
+        <button onclick="document.getElementById('id02').style.display='block'" class="w3-button">VIEW</button>
+        <div id="id02" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container">
+              <span onclick="document.getElementById('id02').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+              <p>RECIPE2.</p>
+              <p>Some text. Some text. Some text.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sample card2 end -->
+
+    <!-- Sample card3 start -->
+    <div class="card1">
+      <img class="img-card-slider" src="F&B_logo.jpg">
+      <p class="recipe-name">RECIPE3</p>
+
+      <!-- Modal= VIEW button -->
+      <div class="w3-container">
+        <button onclick="document.getElementById('id03').style.display='block'" class="w3-button">VIEW</button>
+        <div id="id03" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container">
+              <span onclick="document.getElementById('id03').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+              <p>RECIPE3</p>
+              <p>Some text. Some text. Some text.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sample card3 end -->
+
+    <!-- Sample card4 start -->
+    <div class="card1">
+      <img class="img-card-slider" src="F&B_logo.jpg">
+      <p class="recipe-name">RECIPE4</p>
+
+      <!-- Modal= VIEW button -->
+      <div class="w3-container">
+        <button onclick="document.getElementById('id04').style.display='block'" class="w3-button">VIEW</button>
+        <div id="id04" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container">
+              <span onclick="document.getElementById('id04').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+              <p>RECIPE4</p>
+              <p>Some text. Some text. Some text.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sample card4 end -->
+
+    <!-- Sample card5 start -->
+    <div class="card1">
+      <img class="img-card-slider" src="F&B_logo.jpg">
+      <p class="recipe-name">RECIPE5</p>
+
+      <!-- Modal= VIEW button -->
+      <div class="w3-container">
+        <button onclick="document.getElementById('id05').style.display='block'" class="w3-button">VIEW</button>
+        <div id="id05" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container">
+              <span onclick="document.getElementById('id05').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+              <p>RECIPE5</p>
+              <p>Some text. Some text. Some text.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sample card5 end -->
+
+    <!-- Sample card6 start -->
+    <div class="card1">
+      <img class="img-card-slider" src="F&B_logo.jpg">
+      <p class="recipe-name">RECIPE6</p>
+
+      <!-- Modal= VIEW button -->
+      <div class="w3-container">
+        <button onclick="document.getElementById('id06').style.display='block'" class="w3-button">VIEW</button>
+        <div id="id06" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container">
+              <span onclick="document.getElementById('id06').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+              <p>RECIPE6</p>
+              <p>Some text. Some text. Some text.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sample card6 end -->
+
+    <!-- Sample card7 start -->
+    <div class="card1">
+      <img class="img-card-slider" src="F&B_logo.jpg">
+      <p class="recipe-name">RECIPE7</p>
+
+      <!-- Modal= VIEW button -->
+      <div class="w3-container">
+        <button onclick="document.getElementById('id07').style.display='block'" class="w3-button">VIEW</button>
+        <div id="id07" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container">
+              <span onclick="document.getElementById('id07').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+              <p>RECIPE7</p>
+              <p>Some text. Some text. Some text.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatem similique in odit tempora
+                iste nihil debitis quod quidem, eos adipisci hic facere praesentium perferendis. Vitae ratione voluptas
+                voluptate soluta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sample card7 end -->
+
+    <!-- Sample card8 start -->
+    <div class="card1">
+      <img class="img-card-slider" src="F&B_logo.jpg">
+      <p class="recipe-name">RECIPE8</p>
+
+      <!-- Modal= VIEW button -->
+      <div class="w3-container">
+        <button onclick="document.getElementById('id08').style.display='block'" class="w3-button">VIEW</button>
+        <div id="id08" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container">
+              <span onclick="document.getElementById('id08').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+              <p>RECIPE8</p>
+              <p>Some text. Some text. Some text.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sample card8 end -->
+
+<!-- GRID SLIDER END --> 
+
+<!-- cuisine SLIDER START -->
+
+<div class="scrollmenu">
+
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">INDIAN</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">SOUTH INDIAN</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">NORTH INDIAN</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">ITALIAN</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">MEXICAN</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">AFGHAN</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">BAKED</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">DRINKS</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">DESSERTS</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">BIRYANI</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">CHINESE</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">SNACKS</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">PASTAS</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">PIZZA</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">BREAKFAST</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">SAUCES</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">PICKLES</p>
+  </div>
+  
+  <div class="card2">
+    <img class="img-card-cuisine" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">BBQ</p>
+  </div>
+  </div>
+  
+<!-- RECIPE CONTAINER1 START -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3">  
+      <div class="card3">
+      <img class="img-card-cuisine1" src="F&B_logo.jpg">
+      <p class="recipe-name-cuisine">MOJITO</p>
+    </div>
+  </div>
+    
+  <div class="col-sm-3">  
+    <div class="card3">
+    <img class="img-card-cuisine1" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">COLD COFFEE</p>
+    </div>
+  </div>
+
+  <div class="col-sm-3">  
+    <div class="card3">
+    <img class="img-card-cuisine1" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">LIME JUICE</p>
+    </div>
+  </div>
+
+  <div class="col-sm-3">  
+    <div class="card3">
+    <h1>DRINKS <i class="fas fa-cocktail"></i></h1>
+    <p>Hot and cold drinks..</p>
+    <button class="button"><span>view more</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- RECIPE CONTAINER1 END -->
+
+<!-- RECIPE CONTAINER2 START -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3">  
+      <div class="card3">
+      <h1>PIZZAS <i class="fas fa-pizza-slice"></i></h1>
+      <p>Hot and cold drinks..</p>
+      <button class="button"><span>view more</span></button>
+      </div>
+    </div>
+
+    <div class="col-sm-3">  
+      <div class="card3">
+      <img class="img-card-cuisine1" src="F&B_logo.jpg">
+      <p class="recipe-name-cuisine">MOJITO</p>
+    </div>
+  </div>
+    
+  <div class="col-sm-3">  
+    <div class="card3">
+    <img class="img-card-cuisine1" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">COLD COFFEE</p>
+    </div>
+  </div>
+
+  <div class="col-sm-3">  
+    <div class="card3">
+    <img class="img-card-cuisine1" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">LIME JUICE</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- RECIPE CONTAINER2 END -->
+
+<!-- RECIPE CONTAINER3 START -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3">  
+      <div class="card3">
+      <img class="img-card-cuisine1" src="F&B_logo.jpg">
+      <p class="recipe-name-cuisine">MOJITO</p>
+    </div>
+  </div>
+    
+  <div class="col-sm-3">  
+    <div class="card3">
+    <img class="img-card-cuisine1" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">COLD COFFEE</p>
+    </div>
+  </div>
+
+  <div class="col-sm-3">  
+    <div class="card3">
+    <img class="img-card-cuisine1" src="F&B_logo.jpg">
+    <p class="recipe-name-cuisine">LIME JUICE</p>
+    </div>
+  </div>
+
+  <div class="col-sm-3">  
+    <div class="card3">
+    <h1>BIRYANI <i class="fas fa-drumstick-bite"></i></h1>
+    <p>Hot and cold drinks..</p>
+    <button class="button"><span>view more</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- RECIPE CONTAINER3 END -->
+
+<!-- SUBMIT YOUR RECIPES -->
+
+<div class="Container">
+  <h2>Submit your Delicious recipes here...</h2>
+  <button class="button"><span>Submit now</span></button>
+</div>
+
+  <!-- JAVASCRIPT -->
+
+  <script src="index.js"></script>
 </body>
 
 </html>

@@ -253,6 +253,28 @@ input:checked + .slider:before {
 	text-align: center;
   }
 
+  /* VEG & NONVEG ICON   */
+
+.icon-img {
+	height: 20px;
+	width: 20px;
+	/* margin-right: 10px; */
+	margin-bottom: 8px;
+}
+
+.icon {
+	text-align: left;
+	padding-left: 20px;
+	height: 25px;
+}
+
+.fa {
+	height: 20px;
+	width: 20px;
+	font-family: sans-serif;
+}
+
+
 
   /* GRID SLIDER CSS */
 .card1:hover {
@@ -262,7 +284,7 @@ input:checked + .slider:before {
   }
 
 div.scrollmenu {
-	background-color: #eee;
+	background-color: white;
 	overflow: auto;
 	white-space: nowrap;
 	padding: 20px;
@@ -406,84 +428,3 @@ button.w3-button {
 	border-radius: 0;
 }
 
-.button1 {
-	border-radius: 4px;
-	background-color: green;
-	border: none;
-	color: #FFFFFF;
-	text-align: center;
-	font-size: 28px;
-	padding: 20px;
-	width: 50%;
-	transition: all 0.5s;
-	cursor: pointer;
-	/* margin: 5px; */
-	margin-left: auto;
-  }
-
-/* SUBMIT YOUR RECIPE */
-.container {
-	height: 150px;
-	text-align: center;
-}
-
-.button {
-	border-radius: 4px;
-	background-color: green;
-	border: none;
-	color: #FFFFFF;
-	text-align: center;
-	font-size: 28px;
-	padding: 20px;
-	width: 80%;
-	transition: all 0.5s;
-	cursor: pointer;
-	/* margin: 5px; */
-	margin-left: auto;
-  }
-  
-  .button span {
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	transition: 0.5s;
-  }
-  
-  .button span:after {
-	content: '\00bb';
-	position: absolute;
-	opacity: 0;
-	top: 0;
-	right: -20px;
-	transition: 0.5s;
-  }
-  
-  .button:hover span {
-	padding-right: 25px;
-  }
-  
-  .button:hover span:after {
-	opacity: 1;
-	right: 0;
-  }
-
-/* VEG & NONVEG ICON   */
-
-.icon-img {
-	height: 20px;
-	width: 20px;
-	/* margin-right: 10px; */
-	margin-bottom: 8px;
-}
-
-.icon {
-	text-align: left;
-	padding-left: 20px;
-	height: 25px;
-}
-
-.fa {
-	height: 20px;
-	width: 20px;
-	font-family: sans-serif;
-}

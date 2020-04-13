@@ -290,6 +290,7 @@ div.scrollmenu {
 	white-space: normal;
 	text-align: center;
 	vertical-align: middle;
+	margin: 10px 0px 10px 0px;
   }
 
 .img-card-slider {
@@ -310,6 +311,7 @@ div.scrollmenu {
 	/* white-space: nowrap; */
 	/* overflow: auto; */
 	text-align: center;
+	margin: 0px;
 }
 
 button.w3-button {
@@ -404,6 +406,21 @@ button.w3-button {
 	border-radius: 0;
 }
 
+.button1 {
+	border-radius: 4px;
+	background-color: green;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 28px;
+	padding: 20px;
+	width: 50%;
+	transition: all 0.5s;
+	cursor: pointer;
+	/* margin: 5px; */
+	margin-left: auto;
+  }
+
 /* SUBMIT YOUR RECIPE */
 .container {
 	height: 150px;
@@ -412,7 +429,7 @@ button.w3-button {
 
 .button {
 	border-radius: 4px;
-	background-color: #29fb34;
+	background-color: green;
 	border: none;
 	color: #FFFFFF;
 	text-align: center;
@@ -449,3 +466,24 @@ button.w3-button {
 	opacity: 1;
 	right: 0;
   }
+
+/* VEG & NONVEG ICON   */
+
+.icon-img {
+	height: 20px;
+	width: 20px;
+	/* margin-right: 10px; */
+	margin-bottom: 8px;
+}
+
+.icon {
+	text-align: left;
+	padding-left: 20px;
+	height: 25px;
+}
+
+.fa {
+	height: 20px;
+	width: 20px;
+	font-family: sans-serif;
+}

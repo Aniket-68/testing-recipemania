@@ -11,17 +11,22 @@ body {
 	/* background-image: linear-gradient(135deg, skyblue 50%, lightgreen 100%); */
 }
 
-h1 {
+.h1-header {
 	margin: 20px 0;
+	font-size: 30px;
 	color: black;
-	font-family: 'Times New Roman', Times, serif, sans-serif;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding-left: 0px 20px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #ffd28d;
 }
 
 /* NAVBAR */
 
 .nav-wrapper {
 	display: flex;
-	position: relative;
+	position: fixed;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-items: center;
@@ -30,6 +35,8 @@ h1 {
 	margin: auto;
 	width: 90%;
 	height: 80px;
+	left: 5%;
+	top: 0%;
 	border-radius: 0 0 15px 15px;
 	padding: 0 25px;
 	z-index: 2;
@@ -68,6 +75,7 @@ h1 {
 	align-items: center;
 }
 
+
 .nav-tab:not(:last-child) {
 	padding: 10px 25px;
 	margin: 0;
@@ -78,11 +86,6 @@ h1 {
 	padding: 10px 0 0 25px;
 }
 
-.nav-tab {
-		cursor: pointer;
-		color: black;
-		font-size: 20px;
-}
 label.menu-btn {
 	cursor: pointer;
 	color: black;
@@ -126,6 +129,12 @@ label.menu-btn {
 		color: #00121b;
 	}
 
+.nav-tabs ul {
+	text-align: center;
+	left: 10%;
+	width: 100%;
+	padding: 0px;
+}	
 	.nav-tab:not(:last-child) {
 		padding: 20px 25px;
 		margin: 0;
@@ -135,7 +144,13 @@ label.menu-btn {
 
 	.nav-tab:last-child {
 		padding: 15px 25px;
-    }
+	}
+	
+	.nav-tab {
+		cursor: pointer;
+		color: black;
+		font-size: 20px;
+}
     
     .nav-tab:hover{
         color: #ff9800;
@@ -309,7 +324,11 @@ div.scrollmenu {
 	background-color: white;
 	overflow: auto;
 	white-space: nowrap;
-	padding: 20px;
+	padding: 10px;
+	border: rgba(181, 184, 183, 0.822);
+	border-style: solid;
+	border-width: 2px 0px;
+	margin: 3px 0px;
   }
   
 .card1 {
@@ -331,6 +350,11 @@ div.scrollmenu {
 .carousel-indicators {
 	z-index: 1;
 }  
+
+.w3-modal-content{
+	width: 60%;
+}
+
 .w3-container{
 	color: black;
 	border-radius: 20px;
@@ -462,7 +486,7 @@ button.w3-button {
 }
 
 .img-card-cuisine1:hover {
-	transform: scale(1.2);
+	transform: scale(1.1);
 	border-radius: 0;
 }
 
@@ -802,4 +826,17 @@ input::-webkit-input-placeholder {
 
 .container-search form {
 	margin: 10px 0px;
+}
+
+#card-img-bg {
+	height: 100%;
+}
+
+/* Creating Sections */
+
+.container-fluid {
+	border: rgba(181, 184, 183, 0.822);
+	border-style: solid;
+	border-width: 2px 0px;
+	margin: 3px 0px;
 }

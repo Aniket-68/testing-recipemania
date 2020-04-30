@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700|Work+Sans:100,200,300,400,500,600");
+:root {
+  --headlinesFont: 'Josefin Sans', sans-serif;
+  --bodyFont: 'Work Sans', sans-serif;
+  --wildWatermelon: #ff4f87;
+  --fuelYellow: #f0a035;
+  --textColor: #323232;
+  --bodyBg: #d6d6d6;
+  --white: #fff;
+  --black: #000;
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -60,9 +72,11 @@ body {
 
 .parallax1 {
     z-index: 2;
+    width: 100%;
+    height: fit-content;
     position: absolute;
     top: 100vh;
-    background: rgb(233, 166, 21);
+    background: rgba(255, 255, 255, 0.97);
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -477,17 +491,7 @@ input::-webkit-input-placeholder {
 
 
 /*//card css//*/
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700|Work+Sans:100,200,300,400,500,600");
-:root {
-  --headlinesFont: 'Josefin Sans', sans-serif;
-  --bodyFont: 'Work Sans', sans-serif;
-  --wildWatermelon: #ff4f87;
-  --fuelYellow: #f0a035;
-  --textColor: #323232;
-  --bodyBg: #d6d6d6;
-  --white: #fff;
-  --black: #000;
-}
+
 
 html {
   box-sizing: border-box;
@@ -664,7 +668,7 @@ a {
 
 
 
-/* Extra css */
+/* heading css */
 h2 {
     display: block;
     font-size: 1.5em;
@@ -673,4 +677,12 @@ h2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+}
+
+h1{
+
+  padding: 0.2em;
+  border: 2px  solid black;
+  margin-top: 0.2em;
+  font-family: var(--headlinesFont);
 }

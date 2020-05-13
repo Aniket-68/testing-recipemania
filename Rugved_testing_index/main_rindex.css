@@ -532,7 +532,7 @@ a {
 }
 
 .parallax1 .ft-recipe {
-  width: 300px;
+  width: 280px;
   height: 400px;
   margin-right: 20px;
   border-radius: 10px;
@@ -921,18 +921,18 @@ body {
 
 .card {
   
-  position: relative;
+  position: left;
   background: #fff;
-  max-width: 280px;
+  max-width: 250px;
   margin: 10px auto;
   border-radius: 15px;
-  /*box-shadow: 0px 0px 30px 2px #000;*/
+ /* box-shadow: 2px 0 0 2px  rgba(128, 128, 128, 0.5);*/
   padding: 0;
 }
 .card .header {
  /* background: url("http://img.taste.com.au/UZVXAdo7/taste/2016/11/chinese-egg-noodle-and-vegetable-stir-fry-94186-1.jpeg") no-repeat center;*/
   background-size: cover;
-  min-height: 190px;
+  height: 190px;
   border-radius: 15px 15px 0 0;
   margin: none;
 }
@@ -949,9 +949,11 @@ body {
 .card .text .fa-clock-o {
   color: #9B9B9B;
   margin: 0 20px;
+  font-size: 16px;
 }
 .card .text .fa-users {
   color: #9B9B9B;
+  font-size: 16px;
 }
 /*.card .stars {
   margin: 10px 20px;
@@ -961,6 +963,7 @@ body {
 }*/
 .card .info {
   margin: 10px 20px;
+  font-size: 15px;
 }
 .card a.btn {
   display: block;
@@ -978,3 +981,98 @@ body {
   background: #17BEBB;
   transition: 250ms;
 }
+
+
+
+@media screen and (max-width:480px){
+
+
+  img {
+    max-width: 100%;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    background: url("https://wallpaperscraft.com/image/coffee_coffee_beans_cupcake_candy_93301_1920x1080.jpg") no-repeat center;
+  }
+  
+  .card {
+    
+    position: relative;
+    background: #fff;
+    max-width: 215px;
+    max-height: fit-content;
+    margin: 10px auto;
+    border-radius: 15px;
+    /*box-shadow: 0px 0px 30px 2px #000;*/
+    padding: 0;
+  }
+  .card .header {
+   /* background: url("http://img.taste.com.au/UZVXAdo7/taste/2016/11/chinese-egg-noodle-and-vegetable-stir-fry-94186-1.jpeg") no-repeat center;*/
+    background-size: cover;
+    height: 150px;
+    border-radius: 15px 15px 0 0;
+    margin: none;
+  }
+  .card .text .food {
+    color: #212129;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 5px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  .card .text .fa-clock-o {
+    color: #9B9B9B;
+    margin: 0 20px;
+    font-size: 15px;
+  }
+  .card .text .fa-users {
+    color: #9B9B9B;
+    font-size: 15px;
+  }
+  /*.card .stars {
+    margin: 10px 20px;
+  }
+  .card .stars li a i {
+    color: #FFE500;
+  }*/
+  .card .info {
+    margin: 10px 20px;
+    font-size: 13px;
+  }
+  .card a.btn {
+    display: block;
+    background: #EF3E36;
+  
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 4px;
+    transition: 250ms;
+    border-radius: 0 0 15px 15px;
+  }
+  .card a.btn:hover {
+    background: #17BEBB;
+    transition: 250ms;
+  }
+  
+  
+
+}
+.other-recipe .row{
+ background: rgba(255, 255, 255, 0.75);
+  margin: 0 15px 0 15px;
+ 
+
+
+}
+
+
